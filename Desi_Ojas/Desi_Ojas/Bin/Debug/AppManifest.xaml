@@ -1,0 +1,5 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Desi_Ojas" EntryPointType="Desi_Ojas.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Desi_Ojas" Source="Desi_Ojas.dll" />
+  </Deployment.Parts>
+</Deployment>
