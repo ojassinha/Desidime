@@ -37,33 +37,83 @@
          -->
 
         <!--Pivot Control-->
-        <phone:Pivot Title="MY APPLICATION">
+        <phone:Pivot Title="DESIDIME" Background="White" Foreground="Black">
             <!--Pivot item one-->
-            <phone:PivotItem Header="first">
+            <phone:PivotItem Header="Top" Foreground="Black">
                 <!--Double line list with text wrapping-->
-                <phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}">
+                <phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}" Foreground="Black">
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Margin="0,0,0,17">
-                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                            </StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Url}" Margin="10,10,10,10" Height="130" VerticalAlignment="Center" Stretch="Uniform">
+                                    
+                                </Image>
+                                <Grid Margin="0,0,0,17" Grid.Column="1" Height="150" Background="PeachPuff">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" TextTrimming="WordEllipsis" Text="{Binding LineOne}" TextWrapping="Wrap" FontSize="27" Foreground="Black"/>
+                                    
+                                    <Grid Height="30" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="100"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding LineTwo}" TextWrapping="Wrap" FontSize="27" Foreground="Gray"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding LineThree}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
+                                        <Line Stretch="Fill" Grid.Column="1" Stroke="white" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Left"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding LineFour}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            
                         </DataTemplate>
                     </phone:LongListSelector.ItemTemplate>
                 </phone:LongListSelector>
             </phone:PivotItem>
 
             <!--Pivot item two-->
-            <phone:PivotItem Header="second">
+            <phone:PivotItem Header="Popular" Foreground="Black">
                 <!--Double line list no text wrapping-->
                 <phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}">
                     <phone:LongListSelector.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Margin="0,0,0,17">
-                                    <TextBlock Text="{Binding LineOne}" TextWrapping="NoWrap" Margin="12,0,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <TextBlock Text="{Binding LineThree}" TextWrapping="NoWrap" Margin="12,-6,0,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                </StackPanel>
-                            </DataTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Url}" Margin="10,10,10,10" Height="130" VerticalAlignment="Center" Stretch="Uniform">
+
+                                </Image>
+                                <Grid Margin="0,0,0,17" Grid.Column="1" Height="150" Background="PeachPuff">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" TextTrimming="WordEllipsis" Text="{Binding LineOne}" TextWrapping="Wrap" FontSize="27" Foreground="Black"/>
+
+                                    <Grid Height="30" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="100"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding LineTwo}" TextWrapping="Wrap" FontSize="27" Foreground="Gray"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding LineThree}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
+                                        <Line Stretch="Fill" Grid.Column="1" Stroke="white" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Left"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding LineFour}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+
+                        </DataTemplate>
                     </phone:LongListSelector.ItemTemplate>
                 </phone:LongListSelector>
             </phone:PivotItem>
@@ -77,5 +127,16 @@
             Before shipping remove this XAML and the image itself.-->
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" IsHitTestVisible="False" />-->
     </Grid>
-
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/feature.settings.png" Text="Setting"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/feature.search.png" Text="Search"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Price Comparison"/>
+                <shell:ApplicationBarMenuItem Text="Coupons"/>
+                <shell:ApplicationBarMenuItem Text="Stores"/>
+                <shell:ApplicationBarMenuItem Text="About Us"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

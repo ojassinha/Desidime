@@ -75,6 +75,50 @@ namespace Desi_Ojas.ViewModels
             }
         }
 
+        private string _url;
+        /// <summary>
+        /// Gets or sets the URL.
+        /// </summary>
+        /// <value>
+        /// The URL.
+        /// </value>
+        public string Url
+        {
+            get
+            {
+                return _url;
+            }
+            set
+            {
+                if (value != _url)
+                {
+                    _url = value;
+                    NotifyPropertyChanged("Url");
+                }
+            }
+        }
+
+        private string _lineFour;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public string LineFour
+        {
+            get
+            {
+                return _lineFour;
+            }
+            set
+            {
+                if (value != _lineFour)
+                {
+                    _lineFour = value;
+                    NotifyPropertyChanged("LineFour");
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)
         {

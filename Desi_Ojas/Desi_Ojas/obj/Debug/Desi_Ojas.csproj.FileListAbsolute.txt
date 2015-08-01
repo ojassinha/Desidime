@@ -17,3 +17,31 @@ c:\users\rajatsachdeva\documents\visual studio 2012\Projects\Desi_Ojas\Desi_Ojas
 c:\users\rajatsachdeva\documents\visual studio 2012\Projects\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.dll
 c:\users\rajatsachdeva\documents\visual studio 2012\Projects\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.pdb
 c:\users\rajatsachdeva\documents\visual studio 2012\Projects\Desi_Ojas\Desi_Ojas\obj\Debug\XapCacheFile.xml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Desi_Ojas.dll
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Desi_Ojas.pdb
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\AppManifest.xaml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Desi_Ojas_Debug_AnyCPU.xap
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\App.g.cs
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\MainPage.g.cs
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.g.resources
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.Resources.AppResources.resources
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.csproj.GenerateResource.Cache
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.dll
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.pdb
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\XapCacheFile.xml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\System.Net.Http.dll
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\Newtonsoft.Json.xml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\System.Net.Http.xml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\Bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\rajatsachdeva\Source\Repos\Personal\Desidime\Desi_Ojas\Desi_Ojas\obj\Debug\Desi_Ojas.csprojResolveAssemblyReference.cache
