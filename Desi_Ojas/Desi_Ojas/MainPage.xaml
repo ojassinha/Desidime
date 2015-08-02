@@ -39,9 +39,9 @@
         <!--Pivot Control-->
         <phone:Pivot Title="DESIDIME" Background="White" Foreground="Black">
             <!--Pivot item one-->
-            <phone:PivotItem Header="Top" Foreground="Black">
+            <phone:PivotItem Header="Top">
                 <!--Double line list with text wrapping-->
-                <phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}" Foreground="Black">
+                <phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding TopItems}" Foreground="Black">
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -57,7 +57,7 @@
                                         <RowDefinition Height="100"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" TextTrimming="WordEllipsis" Text="{Binding LineOne}" TextWrapping="Wrap" FontSize="27" Foreground="Black"/>
+                                    <TextBlock Grid.Row="0" TextTrimming="WordEllipsis" Text="{Binding Title}" TextWrapping="Wrap" FontSize="27" Foreground="Black"/>
                                     
                                     <Grid Height="30" Grid.Row="1">
                                         <Grid.ColumnDefinitions>
@@ -65,10 +65,10 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="100"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="{Binding LineTwo}" TextWrapping="Wrap" FontSize="27" Foreground="Gray"/>
-                                        <TextBlock Grid.Column="1" Text="{Binding LineThree}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
+                                        <TextBlock Grid.Column="0" Text="{Binding OriginalPrice}" TextWrapping="Wrap" FontSize="27" Foreground="Gray"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Discount}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
                                         <Line Stretch="Fill" Grid.Column="1" Stroke="white" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Left"/>
-                                        <TextBlock Grid.Column="2" Text="{Binding LineFour}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding CurrentPrice}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -81,7 +81,7 @@
             <!--Pivot item two-->
             <phone:PivotItem Header="Popular" Foreground="Black">
                 <!--Double line list no text wrapping-->
-                <phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding Items}">
+                <phone:LongListSelector Margin="0,0,-12,0" ItemsSource="{Binding PopularItems}">
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -97,7 +97,7 @@
                                         <RowDefinition Height="100"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" TextTrimming="WordEllipsis" Text="{Binding LineOne}" TextWrapping="Wrap" FontSize="27" Foreground="Black"/>
+                                    <TextBlock Grid.Row="0" TextTrimming="WordEllipsis" Text="{Binding Title}" TextWrapping="Wrap" FontSize="27" Foreground="Black"/>
 
                                     <Grid Height="30" Grid.Row="1">
                                         <Grid.ColumnDefinitions>
@@ -105,10 +105,10 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="100"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="{Binding LineTwo}" TextWrapping="Wrap" FontSize="27" Foreground="Gray"/>
-                                        <TextBlock Grid.Column="1" Text="{Binding LineThree}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
+                                        <TextBlock Grid.Column="0" Text="{Binding OriginalPrice}" TextWrapping="Wrap" FontSize="27" Foreground="Gray"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Discount}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
                                         <Line Stretch="Fill" Grid.Column="1" Stroke="white" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Left"/>
-                                        <TextBlock Grid.Column="2" Text="{Binding LineFour}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding CurrentPrice}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
                                     </Grid>
                                 </Grid>
                             </Grid>

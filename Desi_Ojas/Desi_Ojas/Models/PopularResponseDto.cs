@@ -65,5 +65,7 @@ namespace Desi_Ojas.Models
         /// The shipping_charge.
         /// </value>
         public double shipping_charge { get; set; }
+
+        #endregion
     }
 }

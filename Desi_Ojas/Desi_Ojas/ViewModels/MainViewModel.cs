@@ -14,45 +14,19 @@ namespace Desi_Ojas.ViewModels
     {
         public MainViewModel()
         {
-            this.Items = new ObservableCollection<ItemViewModel>();
+            this.TopItems = new ObservableCollection<TopViewModel>();
+            this.PopularItems = new ObservableCollection<PopularViewModel>();
         }
 
         /// <summary>
-        /// A collection for ItemViewModel objects.
+        /// A collection for TopViewModel objects.
         /// </summary>
-        public ObservableCollection<ItemViewModel> Items { get; private set; }
-
-        private string _sampleProperty = "Sample Runtime Property Value";
-        /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding
-        /// </summary>
-        /// <returns></returns>
-        public string SampleProperty
-        {
-            get
-            {
-                return _sampleProperty;
-            }
-            set
-            {
-                if (value != _sampleProperty)
-                {
-                    _sampleProperty = value;
-                    NotifyPropertyChanged("SampleProperty");
-                }
-            }
-        }
+        public ObservableCollection<TopViewModel> TopItems { get; private set; }
 
         /// <summary>
-        /// Sample property that returns a localized string
+        /// A collection for PopularViewModel objects.
         /// </summary>
-        public string LocalizedSampleProperty
-        {
-            get
-            {
-                return AppResources.SampleProperty;
-            }
-        }
+        public ObservableCollection<PopularViewModel> PopularItems { get; private set; }
 
         public bool IsDataLoaded
         {
@@ -61,25 +35,41 @@ namespace Desi_Ojas.ViewModels
         }
 
         /// <summary>
-        /// Creates and adds a few ItemViewModel objects into the Items collection.
+        /// Creates and adds a few TopViewModel objects into the Items collection.
         /// </summary>
         public async void LoadData()
         {
-            // Sample data; replace with real data
-           
-            List<TopResponseDto> res = JsonConvert.DeserializeObject<List<TopResponseDto>>(ResponseString);
-            foreach (var it in res)
+            DataAccessLayer.LoadData loadData = new DataAccessLayer.LoadData();
+            // Gets the top data from data access layer
+            string desi_responseTops = await loadData.GetTopsData();
+            List<TopResponseDto> tops = JsonConvert.DeserializeObject<List<TopResponseDto>>(desi_responseTops);
+            foreach (var it in tops)
             {
                 if (it.off_percent != string.Empty)
                 {
-                    this.Items.Add(new ItemViewModel { LineOne = it.title, LineTwo = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, LineThree = "(" + it.off_percent + "% off" + ")", LineFour = it.current_price.ToString() });
+                    this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
                 }
                 else
                 {
-                    this.Items.Add(new ItemViewModel { LineOne = it.title, LineTwo = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, LineThree = "(" + it.off_percent + "% off" + ")", LineFour = it.current_price.ToString() });
+                    this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
                 }
             }
-           
+
+
+            // Gets the Popular data list , need to be separated in different view model
+            string popular_responseTops = await loadData.GetPopularData();
+            List<PopularResponseDto> popular = JsonConvert.DeserializeObject<List<PopularResponseDto>>(popular_responseTops);
+            foreach (var it in popular)
+            {
+                if (it.off_percent != string.Empty)
+                {
+                    this.PopularItems.Add(new PopularViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
+                }
+                else
+                {
+                    this.PopularItems.Add(new PopularViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
+                }
+            }
             this.IsDataLoaded = true;
         }
 
