@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using Desi_Ojas.Models;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace Desi_Ojas.ViewModels
 {
@@ -71,11 +72,17 @@ namespace Desi_Ojas.ViewModels
             {
                 if (it.off_percent != string.Empty)
                 {
-                    this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
+                    if(it.image_thumb != string.Empty)
+                        this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
+                    else
+                        this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = "Images/placeholder.jpg", Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
                 }
                 else
                 {
-                    this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
+                    if(it.image_thumb != string.Empty)
+                    this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "", CurrentPrice = it.current_price.ToString() });
+                    else
+                        this.TopItems.Add(new TopViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = "Images/placeholder.jpg", Discount = "", CurrentPrice = it.current_price.ToString() });
                 }
             }
 

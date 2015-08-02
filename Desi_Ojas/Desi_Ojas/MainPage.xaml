@@ -66,8 +66,8 @@
                                             <ColumnDefinition Width="100"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Grid.Column="0" Text="{Binding OriginalPrice}" TextWrapping="Wrap" FontSize="27" Foreground="Gray" HorizontalAlignment="Left"/>
+                                        <Line Stretch="Fill" Grid.Column="0" Stroke="White" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
                                         <TextBlock Grid.Column="1" Text="{Binding Discount}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
-                                        <Line Stretch="Fill" Grid.Column="1" Stroke="white" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
                                         <TextBlock Grid.Column="2" Text="{Binding CurrentPrice}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
                                     </Grid>
                                 </Grid>
@@ -106,8 +106,8 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Grid.Column="0" Text="{Binding OriginalPrice}" TextWrapping="Wrap" FontSize="27" Foreground="Gray" HorizontalAlignment="Left"/>
+                                        <Line Stretch="Fill" Grid.Column="0" Stroke="White" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
                                         <TextBlock Grid.Column="1" Text="{Binding Discount}" FontSize="27" Height="34" HorizontalAlignment="Center" Foreground="Gray"   />
-                                        <Line Stretch="Fill" Grid.Column="1" Stroke="white" StrokeThickness="2" X1="1" Width="50" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
                                         <TextBlock Grid.Column="2" Text="{Binding CurrentPrice}" FontSize="27"  Foreground="White" Height="34" HorizontalAlignment="Center"/>
                                     </Grid>
                                 </Grid>

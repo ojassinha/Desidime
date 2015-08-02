@@ -155,6 +155,7 @@
     <Content Include="Images\favs.png" />
     <Content Include="Images\feature.search.png" />
     <Content Include="Images\feature.settings.png" />
+    <Content Include="Images\placeholder.jpg" />
     <Content Include="Images\WP_Home.png" />
   </ItemGroup>
   <ItemGroup>
