@@ -7,21 +7,45 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using Desi_Ojas.Models;
+using System.Windows;
 
 namespace Desi_Ojas.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+
+        private bool isVisible; 
+
         public MainViewModel()
         {
             this.TopItems = new ObservableCollection<TopViewModel>();
             this.PopularItems = new ObservableCollection<PopularViewModel>();
+            this.isVisible = true;
         }
 
         /// <summary>
         /// A collection for TopViewModel objects.
         /// </summary>
         public ObservableCollection<TopViewModel> TopItems { get; private set; }
+
+        /// <summary>
+        /// Gets the is visible.
+        /// </summary>
+        /// <value>
+        /// The is visible.
+        /// </value>
+        public bool IsVisible 
+        {
+            get
+            {
+                return this.isVisible;
+            }
+            private set
+            {
+                this.isVisible = value;
+                NotifyPropertyChanged("IsVisible");
+            }
+        }
 
         /// <summary>
         /// A collection for PopularViewModel objects.
@@ -70,6 +94,8 @@ namespace Desi_Ojas.ViewModels
                     this.PopularItems.Add(new PopularViewModel { Title = it.title, OriginalPrice = "Rs ." + it.original_price.ToString(), Url = it.image_thumb, Discount = "(" + it.off_percent + "% off" + ")", CurrentPrice = it.current_price.ToString() });
                 }
             }
+
+            this.IsVisible = false;
             this.IsDataLoaded = true;
         }
 
